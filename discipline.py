@@ -5,6 +5,7 @@ class Discipline():
         self.credits = credits
         self.id = id
         self.teacher = None
+        self.department = None
     
     def assign_teacher(self, teacher):
         '''It assigns a teacher to the discipline'''

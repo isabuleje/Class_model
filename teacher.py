@@ -5,7 +5,7 @@ class Teacher():
         self.email = first_name + '.' + last_name + "@university.com"
         self.date_of_birth = date_of_birth
         self.department = department
-        self.discipline_teaching = []
+        self.disciplines_teaching = []
         
         
     def get_full_name(self):
@@ -14,7 +14,7 @@ class Teacher():
     
     def assign_disciplines(self, discipline):
         '''Assings the teacher to a discipline'''
-        self.discipline_teaching.append(discipline)
+        self.disciplines_teaching.append(discipline)
         
     
 teacher_1 = Teacher('Laura', 'Pastel', '12022999')
