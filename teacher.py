@@ -8,15 +8,15 @@ class Teacher():
         self.discipline_teaching = []
         
         
-    def full_name(self):
+    def get_full_name(self):
+        '''Gets the teacher full name'''
         return "{} {}".format(self.first_name, self.last_name)
     
-    def get_disciplines(self):
-        pass
-        
     def assign_disciplines(self, discipline):
-        pass
+        '''Assings the teacher to a discipline'''
+        self.discipline_teaching.append(discipline)
+        
     
 teacher_1 = Teacher('Laura', 'Pastel', '12022999')
 
-print(Teacher.full_name(teacher_1))
+print(Teacher.get_full_name(teacher_1))
