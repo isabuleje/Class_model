@@ -1,4 +1,3 @@
-
 class Department():
     def __init__(self, name, director, id):
         self.name = name
@@ -17,6 +16,16 @@ class Department():
         '''Adds a teacher to the teacher list'''
         self.teachers.append(teacher)
         teacher.department = self
+
+    def remove_teacher(self, teacher):
+        '''Removes teacher from the teachers list'''
+        if teacher in self.teachers:
+            self.teachers.remove(teacher)
+
+    def remove_discipline(self, discipline):
+        '''Removes discipline from the discipline list'''
+        if discipline in self.disciplines:
+            self.disciplines.remove(discipline)
         
     def assign_teacher_to_discipline(self, teacher, discipline):
         '''Assigns a teacher to a discipline and a discipline to a teacher'''
