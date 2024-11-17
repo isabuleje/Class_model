@@ -18,7 +18,4 @@ class Discipline():
     def change_credits(self,new_credits):
         '''Changes the credits of a discipline'''
         self.credits = new_credits
-        
-    
-    
-        
+   

@@ -20,6 +20,10 @@ class Teacher():
         if discipline in self.disciplines_teaching:
             self.disciplines_teaching.remove(discipline)
 
+    def show_teacher(self):
+        '''Shows the all the stats of each teacher'''
+        return f"Teacher /n Name = {self.first_name} /n Department = {self.department} /n Disciplines = {self.disciplines_teaching}"
+
     
 teacher_1 = Teacher('Laura', 'Pastel', '12022999','Pedagogiar')
 

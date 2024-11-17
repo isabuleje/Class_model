@@ -29,5 +29,3 @@ fisioterapy_department.add_discipline(matematica_aff)
 
 #Adding teacher to a discipline
 matematica_aff.assign_teacher(teacher_1)
-
-print(University)

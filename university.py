@@ -1,10 +1,12 @@
+from department import Department
+
 class University():
     def __init__(self, name):
         self.name = name
         self.departments = []
     
     def gets_name(self):
-        '''Gets the name from the university'''
+        '''Gets the name of the university'''
         return self.name
 
     def add_departments(self, department):
@@ -15,6 +17,3 @@ class University():
         '''Removes departments from the list'''
         if department in self.departments:
             self.departments.remove(department)
-    
-    def gets_full_discipline(self):
-        '''Grabs a discipline with the department and teacher'''

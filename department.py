@@ -31,5 +31,6 @@ class Department():
         '''Assigns a teacher to a discipline and a discipline to a teacher'''
         discipline.assign_teacher(teacher)
         teacher.add_discipline(discipline)
-                
-        
+            
+    def get_all(self):
+        '''Gets all the teachers and their disciplines from each department'''
