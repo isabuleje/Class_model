@@ -2,7 +2,6 @@ class Teacher():
     def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
-        self.email = first_name + '.' + last_name + "@university.com"
         self.disciplines_teaching = []
         
     def get_full_name(self):
@@ -19,14 +18,8 @@ class Teacher():
         if discipline in self.disciplines_teaching:
             self.disciplines_teaching.remove(discipline)
             discipline.remove_teacher(self)
-
-    def __str__(self):
-        return f"{self.first_name} {self.last_name}"
-
     
-    def __repr__(self):
-        disciplines = ""
-        for disc in self.disciplines_teaching:
-            disciplines += str(disc)+"\n"
-        return f"\n Nome = {self.first_name} {self.last_name} \n Responsável pela disciplina = \n   {disciplines}\n"
+    def __str__(self):
+        disciplines_names = ", ".join(discipline.name for discipline in self.disciplines_teaching)
+        return f"\n Nome = {self.first_name} {self.last_name} \n Responsável pela disciplina =  {disciplines_names}\n "
         

@@ -26,5 +26,5 @@ class Discipline():
     
 
     def __repr__(self):
-        teachers = ", ".join(str(teacher) for teacher in self.teachers)
+        teachers = ", ".join(teacher.get_full_name() for teacher in self.teachers)
         return f"\n Disciplina = {self.name} \n Professor = {teachers} \n Creditos = {self.credits} \n Horas = {self.hours}"
