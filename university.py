@@ -1,9 +1,9 @@
 from department import Department
 
 class University():
-    def __init__(self, name):
+    def __init__(self, name, departments):
         self.name = name
-        self.departments = []
+        self.departments = departments
     
     def gets_name(self):
         '''Gets the name of the university'''
@@ -17,3 +17,7 @@ class University():
         '''Removes departments from the list'''
         if department in self.departments:
             self.departments.remove(department)
+
+    def __repr__(self):
+        dept_names = ", ".join([dept.name for dept in self.departments])
+        return f"\n Universidade = {self.name} \n Departmentos = {dept_names} \n"

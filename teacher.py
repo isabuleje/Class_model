@@ -1,10 +1,9 @@
 class Teacher():
-    def __init__(self, first_name, last_name, date_of_birth, department):
+    def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
         self.email = first_name + '.' + last_name + "@university.com"
-        self.date_of_birth = date_of_birth
-        self.department = department
+        self.department_name = None
         self.disciplines_teaching = []
         
     def get_full_name(self):
@@ -20,11 +19,7 @@ class Teacher():
         if discipline in self.disciplines_teaching:
             self.disciplines_teaching.remove(discipline)
 
-    def show_teacher(self):
-        '''Shows the all the stats of each teacher'''
-        return f"Teacher /n Name = {self.first_name} /n Department = {self.department} /n Disciplines = {self.disciplines_teaching}"
 
-    
-teacher_1 = Teacher('Laura', 'Pastel', '12022999','Pedagogiar')
-
-print(Teacher.get_full_name(teacher_1))
+    def __repr__(self):
+        
+        return f"\n Nome = {self.first_name} \n Departmento = {self.department_name if self.department_name else 'None'} \n Disciplinas responsavel = {self.disciplines_teaching} \n"

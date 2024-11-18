@@ -1,5 +1,5 @@
 class Discipline():
-    def __init__(self, name, hours, credits, id):
+    def __init__(self,id, name, hours, credits):
         self.name = name
         self.hours = hours
         self.credits = credits
@@ -18,4 +18,6 @@ class Discipline():
     def change_credits(self,new_credits):
         '''Changes the credits of a discipline'''
         self.credits = new_credits
-   
+    
+    def __str__(self):
+        return f"\n Disciplinas = ({self.id}), {self.name} \n Professores = {self.teacher if self.teacher else 'None'} \n"

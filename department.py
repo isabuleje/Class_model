@@ -1,11 +1,11 @@
 class Department():
-    def __init__(self, name, director, id):
+    def __init__(self, name, teachers, disciplines):
         self.name = name
         self.email = name + '.' + '@university.com'
-        self.director = director
-        self.teachers = []
-        self.disciplines = []
-        self.id = id
+        self.teachers = teachers
+        self.disciplines = disciplines
+        self.teachers_list = []
+        self.disciplines_list = []
         
     def add_discipline(self, discipline):
         '''Adds the discipline to the discipline list'''
@@ -32,5 +32,5 @@ class Department():
         discipline.assign_teacher(teacher)
         teacher.add_discipline(discipline)
             
-    def get_all(self):
-        '''Gets all the teachers and their disciplines from each department'''
+    def __str__(self):
+        return f"\n Departmentos = {self.name} \n Professores = {self.teachers_list} \n Disciplinas = {self.disciplines_list} \n"
