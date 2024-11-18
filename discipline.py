@@ -31,4 +31,4 @@ class Discipline():
         teachers = ""
         for teacher in self.teachers:
             teachers += str(teacher)+"\n"
-        return f"\n Disciplina = {self.name} \n Professores = \n{teachers} \n"
+        return f"\n    Disciplina = {self.name} \n Professor = \n {teachers} \n"

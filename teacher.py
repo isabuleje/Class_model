@@ -23,9 +23,13 @@ class Teacher():
     def __str__(self):
         return f"Nome = {self.first_name}"
 
+    def _str__(self):
+        return f"Nome = {self.last_name}"
+    
     def __repr__(self):
         disciplines = ""
         for disc in self.disciplines_teaching:
             disciplines += str(disc)+"\n"
-        return f"\n Nome = {self.first_name} \n Disciplinas responsavel = \n{disciplines}\n"
+
+        return f"\n Nome = {self.first_name} {self.last_name} \n Responsável pela disciplinas = \n   {disciplines}\n"
         

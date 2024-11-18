@@ -15,4 +15,5 @@ class Department():
             self.teachers.remove(teacher)
             
     def __str__(self):
-        return f"\n Departmentos = {self.name} \n Professores = {self.teachers}\n"
+        teacher_names = ", ".join(teacher.get_full_name() for teacher in self.teachers)
+        return f"\n Departmento = {self.name} \n Professores = {teacher_names} \n"

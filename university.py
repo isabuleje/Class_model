@@ -1,7 +1,9 @@
-from department import Department
-
 class University():
     def __init__(self, name, departments):
+
+        if not departments or len(departments) < 1:
+            raise ValueError("A universidade deve ter pelo menos 1 departmaneto para funcionar")
+        
         self.name = name
         self.departments = departments
     
