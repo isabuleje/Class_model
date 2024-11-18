@@ -24,11 +24,7 @@ class Discipline():
         '''Changes the credits of a discipline'''
         self.credits = new_credits
     
-    def __str__(self):
-        return f"Disciplina = {self.name}"
-    
+
     def __repr__(self):
-        teachers = ""
-        for teacher in self.teachers:
-            teachers += str(teacher)+"\n"
-        return f"\n    Disciplina = {self.name} \n Professor = \n {teachers} \n"
+        teachers = ", ".join(str(teacher) for teacher in self.teachers)
+        return f"\n Disciplina = {self.name} \n Professor = {teachers} \n Creditos = {self.credits} \n Horas = {self.hours}"

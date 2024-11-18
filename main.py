@@ -3,6 +3,11 @@ from discipline import Discipline
 from department import Department
 from teacher import Teacher
 
+
+#Creating departments
+departamento_tecnologia = Department("Departamento de Tecnologia")
+departamento_basico = Department("Ciclo Basico")
+
 #Creating teachers
 teacher_1 = Teacher("Ronalde", "Ultimo")
 teacher_2 = Teacher("Luize", "Jk")
@@ -14,9 +19,7 @@ lp1 = Discipline("lp1", 40, 10)
 lp2 = Discipline("lp2", 50, 10)
 fisica = Discipline("fisica", 45, 15)
 
-departamento_tecnologia = Department("Departamento de Tecnologia")
-departamento_basico = Department("Ciclo Basico")
-
+#Creating the university
 university = University("UEA", [departamento_tecnologia, departamento_basico])
 
 
@@ -44,6 +47,7 @@ print(matematica_aff)
 print(lp1)
 print(lp2)
 print(fisica)
+print(" ")
 print("-----------------------------------------------------------")
 print("Informacoes dos professores:")
 print(teacher_1)

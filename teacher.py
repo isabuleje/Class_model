@@ -21,15 +21,12 @@ class Teacher():
             discipline.remove_teacher(self)
 
     def __str__(self):
-        return f"Nome = {self.first_name}"
+        return f"{self.first_name} {self.last_name}"
 
-    def _str__(self):
-        return f"Nome = {self.last_name}"
     
     def __repr__(self):
         disciplines = ""
         for disc in self.disciplines_teaching:
             disciplines += str(disc)+"\n"
-
-        return f"\n Nome = {self.first_name} {self.last_name} \n Responsável pela disciplinas = \n   {disciplines}\n"
+        return f"\n Nome = {self.first_name} {self.last_name} \n Responsável pela disciplina = \n   {disciplines}\n"
         
