@@ -9,8 +9,8 @@ departamento_tecnologia = Department("Departamento de Tecnologia")
 departamento_basico = Department("Ciclo Basico")
 
 #Creating teachers
-teacher_1 = Teacher("Ronalde", "Ultimo")
-teacher_2 = Teacher("Luize", "Jk")
+teacher_1 = Teacher("Ronalde", "Pereira")
+teacher_2 = Teacher("Joana", "Pedra")
 teacher_3 = Teacher("Gero", "Nimo")
 
 #Creating disciplines
@@ -32,6 +32,7 @@ teacher_3.assign_disciplines(lp1)
 departamento_basico.add_teacher(teacher_1)
 departamento_tecnologia.add_teacher(teacher_2)
 departamento_tecnologia.add_teacher(teacher_3)
+
 
 
 print("-----------------------------------------------------------")
