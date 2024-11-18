@@ -1,15 +1,20 @@
 class Discipline():
-    def __init__(self,id, name, hours, credits):
+    def __init__(self, name, hours, credits):
         self.name = name
         self.hours = hours
         self.credits = credits
-        self.id = id
-        self.teacher = None
-        self.department = None
+        self.teachers = []
     
-    def assign_teacher(self, teacher):
+    def get_teachers(self):
+        return self.teachers
+
+    def add_teacher(self, teacher):
         '''It assigns a teacher to the discipline'''
-        self.teacher = teacher
+        self.teachers.append(teacher)
+
+    def remove_teacher(self, teacher):
+        if teacher in self.teachers:
+            self.teachers.remove(teacher)
     
     def change_hours(self, new_hours):
         '''Changes the hours of a discipline'''
@@ -20,4 +25,10 @@ class Discipline():
         self.credits = new_credits
     
     def __str__(self):
-        return f"\n Disciplinas = ({self.id}), {self.name} \n Professores = {self.teacher if self.teacher else 'None'} \n"
+        return f"Disciplina = {self.name}"
+    
+    def __repr__(self):
+        teachers = ""
+        for teacher in self.teachers:
+            teachers += str(teacher)+"\n"
+        return f"\n Disciplina = {self.name} \n Professores = \n{teachers} \n"

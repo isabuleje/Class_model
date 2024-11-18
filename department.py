@@ -1,17 +1,9 @@
 class Department():
-    def __init__(self, name, teachers, disciplines):
+    def __init__(self, name):
         self.name = name
         self.email = name + '.' + '@university.com'
-        self.teachers = teachers
-        self.disciplines = disciplines
-        self.teachers_list = []
-        self.disciplines_list = []
-        
-    def add_discipline(self, discipline):
-        '''Adds the discipline to the discipline list'''
-        self.disciplines.append(discipline)
-        discipline.department = self
-        
+        self.teachers = []
+
     def add_teacher(self, teacher):
         '''Adds a teacher to the teacher list'''
         self.teachers.append(teacher)
@@ -21,16 +13,6 @@ class Department():
         '''Removes teacher from the teachers list'''
         if teacher in self.teachers:
             self.teachers.remove(teacher)
-
-    def remove_discipline(self, discipline):
-        '''Removes discipline from the discipline list'''
-        if discipline in self.disciplines:
-            self.disciplines.remove(discipline)
-        
-    def assign_teacher_to_discipline(self, teacher, discipline):
-        '''Assigns a teacher to a discipline and a discipline to a teacher'''
-        discipline.assign_teacher(teacher)
-        teacher.add_discipline(discipline)
             
     def __str__(self):
-        return f"\n Departmentos = {self.name} \n Professores = {self.teachers_list} \n Disciplinas = {self.disciplines_list} \n"
+        return f"\n Departmentos = {self.name} \n Professores = {self.teachers}\n"

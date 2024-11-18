@@ -8,6 +8,10 @@ class University():
     def gets_name(self):
         '''Gets the name of the university'''
         return self.name
+    
+    def get_departments(self):
+        '''Gets the name of the university'''
+        return self.departments
 
     def add_departments(self, department):
         '''Adds departments to the list'''
