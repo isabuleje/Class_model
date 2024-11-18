@@ -1,12 +1,11 @@
 from university import University
 from discipline import Discipline
-from department import Department
 from teacher import Teacher
 
 
 #Creating departments
-departamento_tecnologia = Department("Departamento de Tecnologia")
-departamento_basico = Department("Ciclo Basico")
+departamento_tecnologia ="Departamento de Tecnologia"
+departamento_basico = "Ciclo Basico"
 
 #Creating teachers
 teacher_1 = Teacher("Ronalde", "Pereira")

@@ -1,3 +1,5 @@
+from department import Department
+
 class University():
     def __init__(self, name, departments):
 
@@ -5,7 +7,9 @@ class University():
             raise ValueError("A universidade deve ter pelo menos 1 departmaneto para funcionar")
         
         self.name = name
-        self.departments = departments
+        self.departments = []
+        for department in departments:
+            self.departments.append(Department(department))
     
     def gets_name(self):
         '''Gets the name of the university'''
@@ -17,7 +21,7 @@ class University():
 
     def add_departments(self, department):
         '''Adds departments to the list'''
-        self.departments.append(department)
+        self.departments.append(Department(department))
         
     def remove_departments(self,department):
         '''Removes departments from the list'''
